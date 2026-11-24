@@ -1,278 +1,705 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Vihaan Parmar | Developer Portfolio</title>
 
-    <style>
+    <meta name="description"
+          content="Vihaan Parmar's developer portfolio. B.Tech CSE AI & ML student, Python programmer and aspiring full-stack developer.">
 
+    <style>
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
         }
 
         body {
             font-family: Arial, sans-serif;
-            color: #2c2c2c;
-            line-height: 1.75;
-            max-width: 860px;
-            margin: 48px auto;
-            padding: 0 24px;
-        }
-
-        header {
-            border-bottom: 4px solid #1F4E79;
-            padding-bottom: 20px;
-            margin-bottom: 36px;
-        }
-
-        h1 {
-            color: #1F4E79;
-            font-size: 2rem;
-        }
-
-        h2 {
-            color: #2E75B6;
-            font-size: 1.15rem;
-            margin: 32px 0 14px;
-            padding-left: 12px;
-            border-left: 5px solid #2E75B6;
-        }
-
-        .badge {
-            display: inline-block;
-            background: #1F4E79;
-            color: white;
-            padding: 4px 14px;
-            border-radius: 16px;
-            font-size: 0.82rem;
-            margin: 4px;
-        }
-
-        .card {
-            border: 1px solid #d0d8e4;
-            border-radius: 8px;
-            padding: 20px 22px;
-            margin: 12px 0;
-            background: #f7faff;
-        }
-
-        .card h3 {
-            color: #1F4E79;
-            margin-bottom: 8px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 14px 0;
-        }
-
-        th {
-            background: #1F4E79;
-            color: white;
-            padding: 10px;
-            text-align: left;
-        }
-
-        td {
-            padding: 10px;
-            border-bottom: 1px solid #e0e8f0;
+            background: #0b1120;
+            color: #e2e8f0;
+            line-height: 1.7;
         }
 
         a {
-            color: #2E75B6;
             text-decoration: none;
+            color: inherit;
         }
 
-        a:hover {
-            text-decoration: underline;
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
         }
+
+        /* NAVIGATION */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(11, 17, 32, 0.95);
+            border-bottom: 1px solid #1e293b;
+        }
+
+        nav {
+            min-height: 70px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .logo {
+            font-size: 23px;
+            font-weight: bold;
+            color: #38bdf8;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 22px;
+            flex-wrap: wrap;
+        }
+
+        nav ul a {
+            font-size: 14px;
+            color: #cbd5e1;
+            transition: 0.3s;
+        }
+
+        nav ul a:hover {
+            color: #38bdf8;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            padding: 80px 0;
+        }
+
+        .hero-content {
+            max-width: 750px;
+        }
+
+        .tag {
+            color: #38bdf8;
+            font-weight: bold;
+            letter-spacing: 2px;
+            font-size: 13px;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            font-size: clamp(42px, 7vw, 68px);
+            line-height: 1.15;
+            margin: 18px 0;
+        }
+
+        h1 span {
+            color: #38bdf8;
+        }
+
+        .hero p {
+            color: #94a3b8;
+            font-size: 18px;
+            max-width: 650px;
+            margin-bottom: 25px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 22px;
+            border-radius: 7px;
+            background: #38bdf8;
+            color: #0b1120;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #7dd3fc;
+            transform: translateY(-3px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: #38bdf8;
+            border: 1px solid #38bdf8;
+        }
+
+        .btn-outline:hover {
+            background: #38bdf8;
+            color: #0b1120;
+        }
+
+        /* SECTIONS */
+
+        section {
+            padding: 75px 0;
+        }
+
+        .section-title {
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+
+        .section-title span {
+            color: #38bdf8;
+        }
+
+        .section-description {
+            color: #94a3b8;
+            margin-bottom: 30px;
+        }
+
+        .about-box,
+        .card {
+            background: #111c30;
+            border: 1px solid #263449;
+            padding: 25px;
+            border-radius: 12px;
+            transition: 0.3s;
+        }
+
+        .about-box:hover,
+        .card:hover {
+            border-color: #38bdf8;
+            transform: translateY(-4px);
+        }
+
+        .about-box p {
+            color: #cbd5e1;
+            margin-bottom: 12px;
+        }
+
+        /* SKILLS */
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skill {
+            background: #172b42;
+            border: 1px solid #28445f;
+            color: #7dd3fc;
+            padding: 9px 17px;
+            border-radius: 25px;
+            font-size: 14px;
+        }
+
+        /* CARDS */
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card h3 {
+            color: #38bdf8;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #94a3b8;
+            margin-bottom: 15px;
+        }
+
+        .card a {
+            color: #38bdf8;
+            font-weight: bold;
+        }
+
+        .card a:hover {
+            color: #7dd3fc;
+        }
+
+        .status {
+            display: inline-block;
+            background: #123c31;
+            color: #4ade80;
+            padding: 4px 11px;
+            border-radius: 20px;
+            font-size: 12px;
+            margin-bottom: 12px;
+        }
+
+        /* ROADMAP */
+
+        .roadmap-item {
+            border-left: 3px solid #38bdf8;
+            padding: 5px 0 20px 22px;
+            margin-left: 8px;
+        }
+
+        .roadmap-item h3 {
+            color: #38bdf8;
+        }
+
+        .roadmap-item p {
+            color: #94a3b8;
+        }
+
+        /* CONTACT */
+
+        .contact-box {
+            background: #111c30;
+            border: 1px solid #263449;
+            border-radius: 12px;
+            padding: 35px;
+            text-align: center;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .contact-links a {
+            color: #38bdf8;
+            font-weight: bold;
+        }
+
+        /* FOOTER */
 
         footer {
-            margin-top: 48px;
-            padding-top: 18px;
-            border-top: 1px solid #d0d8e4;
             text-align: center;
-            font-size: 0.82rem;
-            color: #888;
+            padding: 25px;
+            color: #64748b;
+            border-top: 1px solid #1e293b;
+            font-size: 14px;
         }
 
+        @media (max-width: 650px) {
+            nav {
+                justify-content: center;
+                padding: 15px 0;
+            }
+
+            nav ul {
+                justify-content: center;
+                gap: 13px;
+            }
+
+            .hero {
+                min-height: auto;
+                padding: 90px 0;
+            }
+
+            section {
+                padding: 55px 0;
+            }
+
+            .contact-box {
+                padding: 22px;
+            }
+        }
     </style>
 </head>
 
 <body>
 
-<header>
+    <!-- NAVIGATION -->
 
-    <h1>Hi, I am Vihaan Parmar</h1>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#home" class="logo">Vihaan.</a>
 
-    <p>
-        B.Tech CSE (AI & ML) Student |
-        K.R. Mangalam University |
-        Batch 2026–2030
-    </p>
-
-    <br>
-
-    <span class="badge">Python</span>
-    <span class="badge">Linux</span>
-    <span class="badge">Git & GitHub</span>
-    <span class="badge">HTML</span>
-    <span class="badge">CSS</span>
-    <span class="badge">JavaScript</span>
-    <span class="badge">AI & ML</span>
-
-</header>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#certifications">Certifications</a></li>
+                    <li><a href="#roadmap">Roadmap</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
 
-<h2>About Me</h2>
+    <!-- HERO SECTION -->
 
-<p>
-I am a B.Tech Computer Science and Engineering student
-specialising in Artificial Intelligence and Machine Learning
-at K.R. Mangalam University.
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
 
-I am passionate about programming, web development,
-and emerging technologies. My goal is to develop strong
-technical skills and build practical projects while
-exploring Artificial Intelligence and Machine Learning.
-</p>
+                <div class="tag">B.Tech CSE | Artificial Intelligence & Machine Learning</div>
 
+                <h1>
+                    Hi, I'm <span>Vihaan Parmar.</span>
+                </h1>
 
-<h2>Featured Projects</h2>
+                <p>
+                    An aspiring developer passionate about technology,
+                    programming, and building digital experiences.
+                    Currently exploring Python, web development,
+                    and the world of Artificial Intelligence.
+                </p>
 
-<div class="card">
+                <div class="buttons">
+                    <a href="#projects" class="btn">Explore My Work</a>
 
-    <h3>CSE103 Lab – GitHub Collaboration & API Interaction</h3>
+                    <a href="https://github.com/Vihaan-0107"
+                       target="_blank"
+                       class="btn btn-outline">
+                        GitHub Profile
+                    </a>
 
-    <p>
-        A practical laboratory project covering Linux,
-        Shell Scripting, Git, GitHub, Markdown documentation,
-        REST API interaction and debugging.
-    </p>
+                    <a href="https://www.linkedin.com/in/vihaan-parmar-780a98430"
+                       target="_blank"
+                       class="btn btn-outline">
+                        LinkedIn
+                    </a>
+                </div>
 
-    <p>
-        <strong>Tech Stack:</strong>
-        Python, Bash, Git, GitHub, curl, jq, Linux
-    </p>
-
-    <a href="https://github.com/Vihaan-0107/cse103-lab-LAB3">
-        View Repository →
-    </a>
-
-</div>
-
-
-<div class="card">
-
-    <h3>Developer Portfolio</h3>
-
-    <p>
-        A centralised portfolio containing my technical
-        skills, projects, six-semester learning roadmap,
-        and coding platform progress.
-    </p>
-
-    <p>
-        <strong>Tech Stack:</strong>
-        HTML, CSS, Markdown, GitHub Pages
-    </p>
-
-    <a href="https://github.com/Vihaan-0107/developer-portfolio">
-        View Repository →
-    </a>
-
-</div>
+            </div>
+        </div>
+    </section>
 
 
-<h2>Technical Skills</h2>
+    <!-- ABOUT -->
 
-<table>
+    <section id="about">
+        <div class="container">
 
-    <tr>
-        <th>Category</th>
-        <th>Technologies</th>
-    </tr>
+            <h2 class="section-title">About <span>Me</span></h2>
 
-    <tr>
-        <td>Languages</td>
-        <td>Python, JavaScript</td>
-    </tr>
+            <p class="section-description">
+                A little introduction.
+            </p>
 
-    <tr>
-        <td>Web Development</td>
-        <td>HTML, CSS</td>
-    </tr>
+            <div class="about-box">
 
-    <tr>
-        <td>Tools</td>
-        <td>Git, GitHub, VS Code, Ubuntu</td>
-    </tr>
+                <p>
+                    I'm Vihaan Parmar, a B.Tech Computer Science and
+                    Engineering student specializing in Artificial
+                    Intelligence and Machine Learning.
+                </p>
 
-    <tr>
-        <td>Concepts</td>
-        <td>Linux, Shell Scripting, REST APIs</td>
-    </tr>
+                <p>
+                    I enjoy learning how technology works and turning
+                    ideas into practical projects. My current interests
+                    include programming, web development, problem-solving,
+                    and exploring AI and ML.
+                </p>
 
-    <tr>
-        <td>Specialisation</td>
-        <td>Artificial Intelligence and Machine Learning</td>
-    </tr>
+                <p>
+                    I'm continuously improving my technical skills through
+                    coursework, online learning platforms, and hands-on
+                    projects.
+                </p>
 
-</table>
+                <p>
+                    My goal is to become a skilled software developer
+                    who can build useful, creative, and impactful solutions.
+                </p>
 
-
-<h2>Certifications & Progress</h2>
-
-<p>HackerRank Python Basic – In Progress</p>
-
-<p>LeetCode – Learning and Practising</p>
-
-<p>freeCodeCamp – Full-Stack Curriculum In Progress</p>
+            </div>
+        </div>
+    </section>
 
 
-<h2>Learning Roadmap</h2>
+    <!-- SKILLS -->
 
-<p>
-I have planned a structured six-semester learning roadmap
-covering programming fundamentals, data structures,
-web development, databases and Artificial Intelligence
-and Machine Learning.
-</p>
+    <section id="skills">
+        <div class="container">
 
-<p>
-<a href="https://github.com/Vihaan-0107/developer-portfolio/blob/main/LEARNING_ROADMAP.md">
-View My Learning Roadmap →
-</a>
-</p>
+            <h2 class="section-title">Technical <span>Skills</span></h2>
 
+            <p class="section-description">
+                Technologies and tools I have been learning and using.
+            </p>
 
-<h2>Contact</h2>
+            <div class="skills">
+                <span class="skill">Python</span>
+                <span class="skill">HTML</span>
+                <span class="skill">CSS</span>
+                <span class="skill">JavaScript</span>
+                <span class="skill">C Programming</span>
+                <span class="skill">Git</span>
+                <span class="skill">GitHub</span>
+                <span class="skill">Linux</span>
+                <span class="skill">Bash Scripting</span>
+                <span class="skill">REST APIs</span>
+            </div>
 
-<p>
-GitHub:
-<a href="https://github.com/Vihaan-0107">
-Vihaan-0107
-</a>
-</p>
-
-<p>
-LinkedIn: Add your LinkedIn profile URL
-</p>
+        </div>
+    </section>
 
 
-<footer>
+    <!-- PROJECTS -->
 
-    Built with HTML & CSS |
-    Hosted on GitHub Pages |
-    Updated November 2026
+    <section id="projects">
+        <div class="container">
 
-</footer>
+            <h2 class="section-title">Featured <span>Projects</span></h2>
+
+            <p class="section-description">
+                Some of my academic and personal development work.
+            </p>
+
+            <div class="grid">
+
+                <div class="card">
+                    <h3>Developer Portfolio</h3>
+
+                    <p>
+                        A personal portfolio website created using
+                        HTML and CSS to showcase my background,
+                        technical skills, projects, and achievements.
+                    </p>
+
+                    <a href="https://github.com/Vihaan-0107/developer-portfolio"
+                       target="_blank">
+                        View Repository →
+                    </a>
+                    <br><br>
+
+                    <a href="https://vihaan-0107.github.io/developer-portfolio/"
+                       target="_blank">
+                        Visit Live Website →
+                    </a>
+                </div>
+
+
+                <div class="card">
+                    <h3>CSE103 Lab Repository</h3>
+
+                    <p>
+                        Academic lab work involving Git and GitHub,
+                        Linux commands, shell scripting, Markdown,
+                        and working with APIs.
+                    </p>
+
+                    <a href="https://github.com/Vihaan-0107/cse103-lab-LAB3"
+                       target="_blank">
+                        View Repository →
+                    </a>
+                </div>
+
+
+                <div class="card">
+                    <h3>Learning Projects</h3>
+
+                    <p>
+                        Exploring programming fundamentals,
+                        Python concepts, and frontend development
+                        through practical exercises and experiments.
+                    </p>
+
+                    <a href="https://github.com/Vihaan-0107"
+                       target="_blank">
+                        Explore GitHub →
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CERTIFICATIONS -->
+
+    <section id="certifications">
+        <div class="container">
+
+            <h2 class="section-title">
+                Certifications & <span>Achievements</span>
+            </h2>
+
+            <p class="section-description">
+                Certifications and learning milestones.
+            </p>
+
+            <div class="grid">
+
+                <div class="card">
+
+                    <span class="status">✓ Earned</span>
+
+                    <h3>HackerRank – Python (Basic)</h3>
+
+                    <p>
+                        Successfully earned the HackerRank Python
+                        (Basic) Skills Certification, covering scalar
+                        types, operators, control flow, strings,
+                        collections, iteration, modularity, and
+                        object-oriented concepts.
+                    </p>
+
+                    <a href="https://www.hackerrank.com/certificates/1da0fea70064"
+                       target="_blank">
+                        View Verified Certificate →
+                    </a>
+
+                </div>
+
+
+                <div class="card">
+
+                    <span class="status">Learning</span>
+
+                    <h3>freeCodeCamp – Full-Stack Curriculum</h3>
+
+                    <p>
+                        Learning web development fundamentals,
+                        including HTML, CSS, and JavaScript,
+                        through hands-on exercises.
+                    </p>
+
+                    <a href="https://www.freecodecamp.org/"
+                       target="_blank">
+                        Visit freeCodeCamp →
+                    </a>
+
+                </div>
+
+
+                <div class="card">
+
+                    <span class="status">Learning</span>
+
+                    <h3>Programming & Problem Solving</h3>
+
+                    <p>
+                        Improving programming fundamentals,
+                        logical thinking, and problem-solving
+                        through regular practice.
+                    </p>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- LEARNING ROADMAP -->
+
+    <section id="roadmap">
+        <div class="container">
+
+            <h2 class="section-title">My Learning <span>Roadmap</span></h2>
+
+            <p class="section-description">
+                My current direction and future learning goals.
+            </p>
+
+            <div class="roadmap-item">
+                <h3>01. Programming Fundamentals</h3>
+                <p>
+                    Strengthening Python, C programming,
+                    data structures, and problem-solving.
+                </p>
+            </div>
+
+            <div class="roadmap-item">
+                <h3>02. Full-Stack Web Development</h3>
+                <p>
+                    Learning HTML, CSS, JavaScript,
+                    frontend development, and backend fundamentals.
+                </p>
+            </div>
+
+            <div class="roadmap-item">
+                <h3>03. Data Structures & Algorithms</h3>
+                <p>
+                    Developing logical thinking and
+                    learning efficient approaches to coding problems.
+                </p>
+            </div>
+
+            <div class="roadmap-item">
+                <h3>04. Artificial Intelligence & Machine Learning</h3>
+                <p>
+                    Exploring data science, machine learning,
+                    and practical AI applications.
+                </p>
+            </div>
+
+            <div class="roadmap-item">
+                <h3>05. Building Real-World Projects</h3>
+                <p>
+                    Applying my knowledge to create useful
+                    applications and develop a stronger portfolio.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section id="contact">
+        <div class="container">
+
+            <div class="contact-box">
+
+                <h2 class="section-title">
+                    Let's <span>Connect</span>
+                </h2>
+
+                <p class="section-description">
+                    I'm always interested in connecting with
+                    developers, students, and people passionate
+                    about technology.
+                </p>
+
+                <div class="contact-links">
+
+                    <a href="https://github.com/Vihaan-0107"
+                       target="_blank">
+                        GitHub
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/vihaan-parmar-780a98430"
+                       target="_blank">
+                        LinkedIn
+                    </a>
+
+                    <a href="https://www.hackerrank.com/certificates/1da0fea70064"
+                       target="_blank">
+                        HackerRank Certificate
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+        <p>© 2026 Vihaan Parmar. Built with HTML & CSS.</p>
+        <p>Designed and developed by Vihaan.</p>
+    </footer>
 
 </body>
 </html>
