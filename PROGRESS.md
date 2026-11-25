@@ -6,27 +6,27 @@
 
 ## HackerRank
 
-- Profile URL : https://www.hackerrank.com/profile/[your-username]
+- Profile URL : https://www.hackerrank.com/profile/vvihaan0107
 
 - Problems solved : 3 (Say Hello, Python If-Else, Arithmetic Operators)
 
 - Skill test taken : Python (Basic)
 
-- Certificate : [Earned / Pending] | [Certificate URL if earned]
+- Certificate : Earned https://www.hackerrank.com/certificates/1da0fea70064
 
 ## LeetCode
 
-- Profile URL : https://leetcode.com/u/[your-username]
+- Profile URL : https://leetcode.com/u/vihaan-0107
 
 - Easy attempted : 2 (Two Sum, Palindrome Number)
 
-- Easy solved : [update after attempting]
+- Easy solved : 2
 
 - Medium attempted : 0
 
 ## freeCodeCamp
 
-- Profile URL : https://www.freecodecamp.org/[your-username]
+- Profile URL : https://www.freecodecamp.org/vvihaan-0107
 
 - Current track : Responsive Web Design
 
